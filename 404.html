@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page does not exist.">
+    <meta name="theme-color" content="#0d0d0d">
+    <title>Page not found | Aurelius Cars</title>
+    <script>
+        if (location.hostname.endsWith('github.io')) {
+            const base = document.createElement('base');
+            base.href = '/aurelius-cars/';
+            document.head.appendChild(base);
+        }
+    </script>
+    <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <script>
+        // runs before the page is drawn: the "js" class lets CSS prepare the menu and animations,
+        // and the saved theme is applied at once, so there is no dark flash in light mode
+        document.documentElement.classList.add('js');
+        try {
+            if (localStorage.getItem('theme') === 'light') {
+                document.documentElement.classList.add('theme-light');
+                document.documentElement.setAttribute('data-bs-theme', 'light');
+            }
+        } catch (error) {}
+    </script>
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">
+                <img class="logo-mark" src="images/logo-mark.svg" alt="Aurelius Cars logo: gold letter A" width="40" height="40">
+                <span class="logo-text">Aurelius <span>Cars</span></span>
+            </a>
+            <button type="button" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                <span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="menu-label">Menu</span>
+            </button>
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="services.html">Cars &amp; Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="register.html" class="nav-signup" data-guest-only>Sign up</a>
+                <a href="login.html" class="nav-account" id="account-link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span id="account-label">Log in</span></a>
+            </nav>
+            <button type="button" id="theme-toggle" class="theme-switch" role="switch" aria-checked="false">
+                <span class="visually-hidden">Light mode</span>
+                <span class="theme-switch-track" aria-hidden="true">
+                    <span class="theme-switch-thumb"><svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg><svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="not-found" aria-labelledby="page-title">
+            <div class="container">
+                <svg class="car-drawing" viewBox="0 0 640 210" role="img" aria-labelledby="car-404-title">
+                    <title id="car-404-title">Line drawing of a sports coupe</title>
+                    <path class="car-line" d="M110 160 H48 C38 160 32 154 32 146 L33 136 C34 130 38 126 46 124 L130 112 C170 106 210 102 238 98 C262 86 286 72 312 64 C330 59 350 58 372 60 C410 64 444 76 478 90 L540 104 L586 104 C592 104 596 108 596 114 L598 148 C598 155 594 160 586 160 L540 160"/>
+<path class="car-line" d="M460 160 H190"/>
+<path class="car-line" d="M110 160 A40 40 0 0 1 190 160"/>
+<path class="car-line" d="M460 160 A40 40 0 0 1 540 160"/>
+<path class="car-line" d="M256 98 C276 86 296 76 318 71 C336 67 356 67 376 70 C404 74 428 84 452 96 C456 98 455 101 450 101 L262 102 C256 102 253 100 256 98 Z"/>
+<path class="car-line" d="M372 70 L366 101"/>
+<path class="car-line car-line-soft" d="M200 124 C290 119 380 115 440 113"/>
+<path class="car-line" d="M430 124 C446 122 458 124 468 130 L452 142"/>
+<path class="car-light" d="M42 130 L76 125"/>
+<path class="car-tail" d="M556 108 L594 110"/>
+<g class="car-wheel"><circle cx="150" cy="162" r="32"/><circle cx="150" cy="162" r="11"/><path d="M150 130 V151 M150 173 V194 M118 162 H139 M161 162 H182 M127 139 L142 154 M158 170 L173 185 M173 139 L158 154 M142 170 L127 185"/></g>
+<g class="car-wheel"><circle cx="500" cy="162" r="32"/><circle cx="500" cy="162" r="11"/><path d="M500 130 V151 M500 173 V194 M468 162 H489 M511 162 H532 M477 139 L492 154 M508 170 L523 185 M523 139 L508 154 M492 170 L477 185"/></g>
+<path class="car-road" d="M10 200 H630"/>
+                </svg>
+                <p class="eyebrow">Error 404</p>
+                <h1 id="page-title">Wrong turn</h1>
+                <p class="section-intro">This road does not exist. The page may have moved, or the address has a typo.</p>
+                <div class="button-row">
+                    <a class="button button-arrow" href="index.html">Back to the home page <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                    <a class="button button-outline" href="services.html">See our cars</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <section aria-labelledby="footer-about">
+                    <h2 id="footer-about" class="footer-logo"><img src="images/logo-mark.svg" alt="" width="32" height="32"> Aurelius Cars</h2>
+                    <p>A car showroom in Astana with Porsche, Mercedes-Benz and Audi models, test drives and our own service centre.</p>
+                    <ul class="footer-brands" aria-label="Brands in our showroom">
+                        <li><img src="images/brands/porsche.svg" alt="Porsche logo" width="28" height="28"></li>
+                        <li><img src="images/brands/mercedes.svg" alt="Mercedes-Benz logo" width="28" height="28"></li>
+                        <li><img src="images/brands/audi.svg" alt="Audi logo" width="28" height="28"></li>
+                    </ul>
+                </section>
+                <section aria-labelledby="footer-pages">
+                    <h2 id="footer-pages">Pages</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Cars &amp; Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </section>
+                <section aria-labelledby="footer-club">
+                    <h2 id="footer-club">Aurelius Club</h2>
+                    <ul>
+                        <li><a href="register.html">Sign up</a></li>
+                        <li><a href="login.html">Log in</a></li>
+                        <li><a href="profile.html">My profile</a></li>
+                    </ul>
+                </section>
+                <section aria-labelledby="footer-contact">
+                    <h2 id="footer-contact">Contact</h2>
+                    <address>
+                        <p>12 Gold Avenue, Astana</p>
+                        <p><a href="tel:+77000000000">+7 700 000 0000</a></p>
+                        <p><a href="mailto:hello@aureliuscars.example">hello@aureliuscars.example</a></p>
+                    </address>
+                </section>
+            </div>
+            <p class="copyright">&copy; 2026 Aurelius Cars. Final project for Web Technologies (Frontend), Astana IT University, group MT-2504. The showroom, address and phone number are fictional. Car brand logos belong to their owners and are shown only to name the brands.</p>
+        </div>
+    </footer>
+    <p class="toast" id="toast" role="status" aria-live="polite"></p>
+    <script src="js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+/* phones up to 30rem = 480px: the menu button shows only the icon, its name stays for screen readers */
+@media (max-width: 30rem) {
+    .header-inner {
+        gap: 0.5rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+        gap: 0.5rem;
+    }
+
+    .menu-toggle {
+        padding: 0.6rem 0.7rem;
+    }
+
+    .menu-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+    }
+
+    .menu-bars {
+        width: 1.15rem;
+    }
+}
+
+/* small phones: 22.5rem = 360px */
+@media (max-width: 22.5rem) {
+    .logo {
+        font-size: 1.15rem;
+    }
+
+    .logo-mark {
+        width: 2.1rem;
+        height: 2.1rem;
+    }
+
+    .password-rules {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .catalogue-tools .segmented-button {
+        padding-inline: 0.75rem;
+    }
+}
+
+/* phones: the header row has the logo, the theme switch and the menu button */
+@media (max-width: 67.99rem) {
+    .theme-switch {
+        order: 1;
+    }
+
+    .menu-toggle {
+        order: 2;
+    }
+
+    .main-nav {
+        order: 3;
+    }
+
+    /* jQuery slideDown() shows the menu as a block, so each link is a full-width row */
+    .main-nav a {
+        display: block;
+    }
+
+    .main-nav a.nav-account {
+        display: flex;
+        width: max-content;
+        margin-top: 0.5rem;
+    }
+}
+
+/* tablet: 48rem = 768px */
+@media (min-width: 48rem) {
+    section {
+        padding-block: 3rem;
+    }
+
+    .page-hero {
+        padding-block: 4.5rem 3.5rem;
+    }
+
+    .hero-layout {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hero-layout > * {
+        flex: 1;
+    }
+
+    .features,
+    .cards,
+    .service-list,
+    .values,
+    .steps,
+    .team {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .brand-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .brand-grid li:nth-child(3) {
+        border-left: 1px solid var(--color-border);
+    }
+
+    .brand-grid li:nth-child(n + 3) {
+        border-top: 0;
+    }
+
+    .stats {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .profile-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .profile-wide {
+        grid-column: 1 / -1;
+    }
+
+    .brand-strip {
+        padding-block: 2.5rem;
+    }
+}
+
+/* small laptops: 64rem = 1024px */
+@media (min-width: 64rem) {
+    .features,
+    .cards,
+    .service-list,
+    .values {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .steps,
+    .team {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .contact-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .contact-layout > .contact-form {
+        flex: 3;
+    }
+
+    .contact-layout > .contact-details {
+        flex: 2;
+    }
+
+    .auth-layout {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    }
+
+    .auth-layout-narrow {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1.3fr;
+    }
+}
+
+/* desktop: 68rem = 1088px, the full menu with the account links fits in one line */
+@media (min-width: 68rem) {
+    .header-inner {
+        flex-wrap: nowrap;
+        gap: 1.25rem;
+    }
+
+    .menu-toggle,
+    .js .menu-toggle {
+        display: none;
+    }
+
+    /* !important wins over the inline style left by slideUp() on a small screen */
+    .main-nav,
+    .js .main-nav {
+        display: flex !important;
+        flex-direction: row;
+        flex-basis: auto;
+        align-items: center;
+    }
+
+    .main-nav a.nav-account {
+        margin-left: 0.5rem;
+    }
+}

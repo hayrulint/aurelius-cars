@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aurelius Cars: Porsche, Mercedes-Benz and Audi showroom in Astana with test drives, clear prices and our own service centre.">
+    <meta name="theme-color" content="#0d0d0d">
+    <title>Home | Aurelius Cars</title>
+    <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <script>
+        // runs before the page is drawn: the "js" class lets CSS prepare the menu and animations,
+        // and the saved theme is applied at once, so there is no dark flash in light mode
+        document.documentElement.classList.add('js');
+        try {
+            if (localStorage.getItem('theme') === 'light') {
+                document.documentElement.classList.add('theme-light');
+                document.documentElement.setAttribute('data-bs-theme', 'light');
+            }
+        } catch (error) {}
+    </script>
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">
+                <img class="logo-mark" src="images/logo-mark.svg" alt="Aurelius Cars logo: gold letter A" width="40" height="40">
+                <span class="logo-text">Aurelius <span>Cars</span></span>
+            </a>
+            <button type="button" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                <span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="menu-label">Menu</span>
+            </button>
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="services.html">Cars &amp; Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="register.html" class="nav-signup" data-guest-only>Sign up</a>
+                <a href="login.html" class="nav-account" id="account-link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span id="account-label">Log in</span></a>
+            </nav>
+            <button type="button" id="theme-toggle" class="theme-switch" role="switch" aria-checked="false">
+                <span class="visually-hidden">Light mode</span>
+                <span class="theme-switch-track" aria-hidden="true">
+                    <span class="theme-switch-thumb"><svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg><svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="page-hero hero-home" aria-labelledby="page-title">
+            <div class="container hero-layout">
+                <div class="hero-text">
+                    <p class="eyebrow">Porsche, Mercedes-Benz and Audi in Astana</p>
+                    <h1 id="page-title">Find the car that fits <span class="text-gradient">your life</span></h1>
+                    <p class="hero-lead">Aurelius Cars is a showroom for people who want a beautiful, safe and comfortable car. We compare models with you, explain the real costs and let you try the car before you decide.</p>
+                    <div class="button-row">
+                        <a class="button button-arrow" href="services.html">See our cars <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                        <a class="button button-outline" href="contact.html#test-drive">Book a test drive</a>
+                    </div>
+                    <ul class="hero-facts">
+                        <li><strong>6</strong> models in stock</li>
+                        <li><strong>30 min</strong> test drives</li>
+                        <li><strong>120</strong> point check</li>
+                    </ul>
+                </div>
+                <div class="hero-media car-media">
+                    <img class="hero-image" src="images/mercedes-g63.jpg" alt="Black Mercedes-AMG G 63 in front of snowy mountains" width="1200" height="900">
+                    <span class="brand-badge"><img src="images/brands/mercedes.svg" alt="Mercedes-Benz logo" width="26" height="26"></span>
+                    <span class="emblem emblem-mercedes-g63"><img class="emblem-img" src="images/emblems/mercedes-g63.png" alt="Mercedes-AMG G 63 badge" width="323" height="192" loading="lazy"><span class="emblem-shine" style="-webkit-mask-image: url('images/emblems/mercedes-g63.png'); mask-image: url('images/emblems/mercedes-g63.png')"></span></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="brand-strip" aria-labelledby="strip-title">
+            <div class="container">
+                <h2 id="strip-title" class="strip-title">Trade-in and service for every premium brand</h2>
+            </div>
+            <div class="marquee">
+                <ul class="marquee-track">
+                    <li><img src="images/brands/porsche.svg" alt="Porsche" width="48" height="48"></li>
+                    <li><img src="images/brands/mercedes.svg" alt="Mercedes-Benz" width="48" height="48"></li>
+                    <li><img src="images/brands/audi.svg" alt="Audi" width="48" height="48"></li>
+                    <li><img src="images/brands/bmw.svg" alt="BMW" width="48" height="48"></li>
+                    <li><img src="images/brands/bentley.svg" alt="Bentley" width="48" height="48"></li>
+                    <li><img src="images/brands/lamborghini.svg" alt="Lamborghini" width="48" height="48"></li>
+                    <li><img src="images/brands/astonmartin.svg" alt="Aston Martin" width="48" height="48"></li>
+                    <li><img src="images/brands/rollsroyce.svg" alt="Rolls-Royce" width="48" height="48"></li>
+                    <li><img src="images/brands/ferrari.svg" alt="Ferrari" width="48" height="48"></li>
+                    <li><img src="images/brands/landrover.svg" alt="Land Rover" width="48" height="48"></li>
+                    <li><img src="images/brands/maserati.svg" alt="Maserati" width="48" height="48"></li>
+                    <li><img src="images/brands/mclaren.svg" alt="McLaren" width="48" height="48"></li>
+                    <li><img src="images/brands/jaguar.svg" alt="Jaguar" width="48" height="48"></li>
+                </ul>
+                <!-- the second copy makes the loop seamless; script.js fills it, screen readers skip it -->
+                <ul class="marquee-track" aria-hidden="true"></ul>
+            </div>
+        </section>
+
+        <section id="brands" aria-labelledby="brands-title">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Showroom</p>
+                        <h2 id="brands-title">Select your car by brand</h2>
+                    </div>
+                    <a class="link-arrow" href="services.html#catalogue">All six models <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                </div>
+                <ul class="brand-grid">
+                    <li>
+                        <a class="brand-tile" href="services.html?brand=porsche#catalogue">
+                            <img src="images/brands/porsche.svg" alt="Porsche crest" width="64" height="64">
+                            <span class="brand-name">Porsche</span>
+                            <span class="brand-count">3 models</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="brand-tile" href="services.html?brand=mercedes#catalogue">
+                            <img src="images/brands/mercedes.svg" alt="Mercedes-Benz star" width="64" height="64">
+                            <span class="brand-name">Mercedes-Benz</span>
+                            <span class="brand-count">2 models</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="brand-tile" href="services.html?brand=audi#catalogue">
+                            <img src="images/brands/audi.svg" alt="Audi four rings" width="64" height="64">
+                            <span class="brand-name">Audi</span>
+                            <span class="brand-count">1 model</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="brand-tile brand-tile-all" href="services.html?brand=all#catalogue">
+                            <span class="brand-tile-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"/><path d="M7 14h.01"/><path d="M17 14h.01"/><rect width="18" height="8" x="3" y="10" rx="2"/><path d="M5 18v2"/><path d="M19 18v2"/></svg></span>
+                            <span class="brand-name">All brands</span>
+                            <span class="brand-count">6 models</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="speed-ruler" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <section id="welcome" aria-labelledby="welcome-title">
+            <div class="container">
+                <h2 id="welcome-title">Say hello before you start</h2>
+                <p class="section-intro">Tell us your name and we will show you where to begin.</p>
+                <div class="feature-box">
+                    <form id="welcome-form" class="inline-form" novalidate>
+                        <div class="form-field">
+                            <label for="visitor-name" class="form-label">Your name</label>
+                            <input type="text" class="form-control" id="visitor-name" name="visitor-name" autocomplete="given-name" maxlength="30" aria-describedby="welcome-message">
+                        </div>
+                        <button type="submit" class="button">Say hello</button>
+                    </form>
+                    <p class="welcome-message" id="welcome-message" aria-live="polite">Your greeting will appear here.</p>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="why-title">
+            <div class="container">
+                <h2 id="why-title">Why drivers choose Aurelius</h2>
+                <p class="section-intro">Six reasons our customers come back.</p>
+                <ul class="features">
+                    <li class="card reveal">
+                        <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+                        <h3>Checked cars</h3>
+                        <p>Every car passes a 120-point technical check before it appears in our catalogue.</p>
+                    </li>
+                    <li class="card reveal">
+                        <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg></span>
+                        <h3>Clear prices</h3>
+                        <p>The price on the page is the full price. Compare all models in our <a href="services.html#compare">comparison table</a>.</p>
+                    </li>
+                    <li class="card reveal">
+                        <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"/><path d="M7 14h.01"/><path d="M17 14h.01"/><rect width="18" height="8" x="3" y="10" rx="2"/><path d="M5 18v2"/><path d="M19 18v2"/></svg></span>
+                        <h3>Test drives</h3>
+                        <p>Try any car in the city for 30 minutes with one of our consultants.</p>
+                    </li>
+                    <li class="card reveal">
+                        <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg></span>
+                        <h3>Trade-in</h3>
+                        <p>Bring your old car and we will include its value in the price of the new one.</p>
+                    </li>
+                    <li class="card reveal">
+                        <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/></svg></span>
+                        <h3>Service centre</h3>
+                        <p>Maintenance, tyres and detailing are done in our own workshop.</p>
+                    </li>
+                    <li class="card reveal">
+                        <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></span>
+                        <h3>Honest advice</h3>
+                        <p>We never push the most expensive option. Read about our values on the <a href="about.html#values">About page</a>.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section aria-labelledby="popular-title">
+            <div class="container">
+                <h2 id="popular-title">Popular this month</h2>
+                <p class="section-intro">Three models customers ask about most often. The full catalogue has six cars with specifications.</p>
+                <div class="cards">
+                    <article class="card car-card reveal">
+                        <div class="car-media">
+                            <img class="card-image" src="images/porsche-911.jpg" alt="Grey Porsche 911 parked by a green hedge" width="1200" height="900" loading="lazy">
+                            <span class="brand-badge"><img src="images/brands/porsche.svg" alt="Porsche logo" width="26" height="26"></span>
+                            <span class="emblem emblem-porsche-911"><img class="emblem-img" src="images/emblems/porsche-911.png" alt="Porsche 911 Carrera S badge" width="395" height="120" loading="lazy"><span class="emblem-shine" style="-webkit-mask-image: url('images/emblems/porsche-911.png'); mask-image: url('images/emblems/porsche-911.png')"></span></span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Porsche 911 Carrera S</h3>
+                            <p>Fast, beautiful and still practical for the city.</p>
+                            <p class="price">From $130,000</p>
+                            <a class="button button-outline" href="services.html#porsche-911">View details</a>
+                        </div>
+                    </article>
+                    <article class="card car-card reveal">
+                        <div class="car-media">
+                            <img class="card-image" src="images/mercedes-g63.jpg" alt="Black Mercedes-AMG G 63 in front of snowy mountains" width="1200" height="900" loading="lazy">
+                            <span class="brand-badge"><img src="images/brands/mercedes.svg" alt="Mercedes-Benz logo" width="26" height="26"></span>
+                            <span class="emblem emblem-mercedes-g63"><img class="emblem-img" src="images/emblems/mercedes-g63.png" alt="Mercedes-AMG G 63 badge" width="323" height="192" loading="lazy"><span class="emblem-shine" style="-webkit-mask-image: url('images/emblems/mercedes-g63.png'); mask-image: url('images/emblems/mercedes-g63.png')"></span></span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Mercedes-AMG G 63</h3>
+                            <p>The legendary SUV that everybody calls &ldquo;Gelik&rdquo;.</p>
+                            <p class="price">From $180,000</p>
+                            <a class="button button-outline" href="services.html#mercedes-g63">View details</a>
+                        </div>
+                    </article>
+                    <article class="card car-card reveal">
+                        <div class="car-media">
+                            <img class="card-image" src="images/porsche-taycan.jpg" alt="Silver Porsche Taycan parked near a brick building" width="1200" height="900" loading="lazy">
+                            <span class="brand-badge"><img src="images/brands/porsche.svg" alt="Porsche logo" width="26" height="26"></span>
+                            <span class="emblem emblem-porsche-taycan"><img class="emblem-img" src="images/emblems/porsche-taycan.png" alt="Porsche Taycan 4S badge" width="520" height="92" loading="lazy"><span class="emblem-shine" style="-webkit-mask-image: url('images/emblems/porsche-taycan.png'); mask-image: url('images/emblems/porsche-taycan.png')"></span></span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Porsche Taycan 4S</h3>
+                            <p>Electric Porsche with fast charging and no petrol costs.</p>
+                            <p class="price">From $110,000</p>
+                            <a class="button button-outline" href="services.html#porsche-taycan">View details</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="steps-title">
+            <div class="container">
+                <h2 id="steps-title">How buying a car works</h2>
+                <ol class="steps">
+                    <li class="card reveal"><h3>Choose</h3><p>Compare models and prices in the <a href="services.html">catalogue</a> and make a shortlist.</p></li>
+                    <li class="card reveal"><h3>Book</h3><p>Pick a car and a day in the <a href="contact.html#test-drive">test drive form</a>.</p></li>
+                    <li class="card reveal"><h3>Test drive</h3><p>Drive the car on real city roads before you decide.</p></li>
+                    <li class="card reveal"><h3>Drive home</h3><p>Sign the documents and receive the keys the same week.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="cta-band" aria-labelledby="cta-title">
+            <div class="container">
+                <svg class="car-drawing" viewBox="0 0 640 210" role="img" aria-labelledby="car-drawing-title">
+                    <title id="car-drawing-title">Line drawing of a sports coupe</title>
+                    <path class="car-line" d="M110 160 H48 C38 160 32 154 32 146 L33 136 C34 130 38 126 46 124 L130 112 C170 106 210 102 238 98 C262 86 286 72 312 64 C330 59 350 58 372 60 C410 64 444 76 478 90 L540 104 L586 104 C592 104 596 108 596 114 L598 148 C598 155 594 160 586 160 L540 160"/>
+<path class="car-line" d="M460 160 H190"/>
+<path class="car-line" d="M110 160 A40 40 0 0 1 190 160"/>
+<path class="car-line" d="M460 160 A40 40 0 0 1 540 160"/>
+<path class="car-line" d="M256 98 C276 86 296 76 318 71 C336 67 356 67 376 70 C404 74 428 84 452 96 C456 98 455 101 450 101 L262 102 C256 102 253 100 256 98 Z"/>
+<path class="car-line" d="M372 70 L366 101"/>
+<path class="car-line car-line-soft" d="M200 124 C290 119 380 115 440 113"/>
+<path class="car-line" d="M430 124 C446 122 458 124 468 130 L452 142"/>
+<path class="car-light" d="M42 130 L76 125"/>
+<path class="car-tail" d="M556 108 L594 110"/>
+<g class="car-wheel"><circle cx="150" cy="162" r="32"/><circle cx="150" cy="162" r="11"/><path d="M150 130 V151 M150 173 V194 M118 162 H139 M161 162 H182 M127 139 L142 154 M158 170 L173 185 M173 139 L158 154 M142 170 L127 185"/></g>
+<g class="car-wheel"><circle cx="500" cy="162" r="32"/><circle cx="500" cy="162" r="11"/><path d="M500 130 V151 M500 173 V194 M468 162 H489 M511 162 H532 M477 139 L492 154 M508 170 L523 185 M523 139 L508 154 M492 170 L477 185"/></g>
+<path class="car-road" d="M10 200 H630"/>
+                </svg>
+                <h2 id="cta-title">Still have questions?</h2>
+                <p>Read the answers to common questions or join the Aurelius Club to keep your shortlist and test drives in one profile.</p>
+                <div class="button-row">
+                    <a class="button" href="contact.html#faq">Read the FAQ</a>
+                    <a class="button button-outline" href="register.html">Join the club</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <section aria-labelledby="footer-about">
+                    <h2 id="footer-about" class="footer-logo"><img src="images/logo-mark.svg" alt="" width="32" height="32"> Aurelius Cars</h2>
+                    <p>A car showroom in Astana with Porsche, Mercedes-Benz and Audi models, test drives and our own service centre.</p>
+                    <ul class="footer-brands" aria-label="Brands in our showroom">
+                        <li><img src="images/brands/porsche.svg" alt="Porsche logo" width="28" height="28"></li>
+                        <li><img src="images/brands/mercedes.svg" alt="Mercedes-Benz logo" width="28" height="28"></li>
+                        <li><img src="images/brands/audi.svg" alt="Audi logo" width="28" height="28"></li>
+                    </ul>
+                </section>
+                <section aria-labelledby="footer-pages">
+                    <h2 id="footer-pages">Pages</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Cars &amp; Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </section>
+                <section aria-labelledby="footer-club">
+                    <h2 id="footer-club">Aurelius Club</h2>
+                    <ul>
+                        <li><a href="register.html">Sign up</a></li>
+                        <li><a href="login.html">Log in</a></li>
+                        <li><a href="profile.html">My profile</a></li>
+                    </ul>
+                </section>
+                <section aria-labelledby="footer-contact">
+                    <h2 id="footer-contact">Contact</h2>
+                    <address>
+                        <p>12 Gold Avenue, Astana</p>
+                        <p><a href="tel:+77000000000">+7 700 000 0000</a></p>
+                        <p><a href="mailto:hello@aureliuscars.example">hello@aureliuscars.example</a></p>
+                    </address>
+                </section>
+            </div>
+            <p class="copyright">&copy; 2026 Aurelius Cars. Final project for Web Technologies (Frontend), Astana IT University, group MT-2504. The showroom, address and phone number are fictional. Car brand logos belong to their owners and are shown only to name the brands.</p>
+        </div>
+    </footer>
+    <p class="toast" id="toast" role="status" aria-live="polite"></p>
+    <script src="js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/welcome.js"></script>
+</body>
+</html>

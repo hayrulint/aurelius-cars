@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catalogue of six car models with search, brand filter, sorting, prices in USD, KZT or EUR, a shortlist and after-sale services.">
+    <meta name="theme-color" content="#0d0d0d">
+    <title>Cars &amp; Services | Aurelius Cars</title>
+    <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <script>
+        // runs before the page is drawn: the "js" class lets CSS prepare the menu and animations,
+        // and the saved theme is applied at once, so there is no dark flash in light mode
+        document.documentElement.classList.add('js');
+        try {
+            if (localStorage.getItem('theme') === 'light') {
+                document.documentElement.classList.add('theme-light');
+                document.documentElement.setAttribute('data-bs-theme', 'light');
+            }
+        } catch (error) {}
+    </script>
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">
+                <img class="logo-mark" src="images/logo-mark.svg" alt="Aurelius Cars logo: gold letter A" width="40" height="40">
+                <span class="logo-text">Aurelius <span>Cars</span></span>
+            </a>
+            <button type="button" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                <span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="menu-label">Menu</span>
+            </button>
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="services.html" aria-current="page">Cars &amp; Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="register.html" class="nav-signup" data-guest-only>Sign up</a>
+                <a href="login.html" class="nav-account" id="account-link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span id="account-label">Log in</span></a>
+            </nav>
+            <button type="button" id="theme-toggle" class="theme-switch" role="switch" aria-checked="false">
+                <span class="visually-hidden">Light mode</span>
+                <span class="theme-switch-track" aria-hidden="true">
+                    <span class="theme-switch-thumb"><svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg><svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="page-hero" aria-labelledby="page-title">
+            <div class="container hero-layout">
+                <div class="hero-text">
+                    <p class="eyebrow">Catalogue and services</p>
+                    <h1 id="page-title">Our cars and services</h1>
+                    <p class="hero-lead">Six cars from Porsche, Mercedes-Benz and Audi: sports cars, the G-Class SUV, a business sedan and an electric Porsche. Search the catalogue, save the cars you like to a shortlist and compare all prices in one table.</p>
+                    <div class="button-row">
+                        <a class="button button-arrow" href="#catalogue">Open the catalogue <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                        <a class="button button-outline" href="#compare">Compare prices</a>
+                    </div>
+                </div>
+                <div class="hero-media car-media">
+                    <img class="hero-image" src="images/porsche-taycan.jpg" alt="Silver Porsche Taycan on a city street" width="1200" height="900">
+                    <span class="brand-badge"><img src="images/brands/porsche.svg" alt="Porsche logo" width="26" height="26"></span>
+                    <span class="emblem emblem-porsche-taycan"><img class="emblem-img" src="images/emblems/porsche-taycan.png" alt="Porsche Taycan 4S badge" width="520" height="92" loading="lazy"><span class="emblem-shine" style="-webkit-mask-image: url('images/emblems/porsche-taycan.png'); mask-image: url('images/emblems/porsche-taycan.png')"></span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalogue" aria-labelledby="catalogue-title">
+            <div class="container">
+                <h2 id="catalogue-title">Car catalogue</h2>
+                <p class="section-intro">All cars are available for a test drive. Prices are starting prices for the basic version. Your search, brand, sorting and currency are remembered in this browser.</p>
+                <div class="catalogue-tools">
+                    <div class="search-bar">
+                        <label for="car-search" class="form-label">Search by model or type</label>
+                        <div class="input-icon">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+                            <input type="search" class="form-control" id="car-search" name="car-search" placeholder="For example: 911 or SUV" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="filter-block">
+                        <p class="form-label" id="brand-label">Brand</p>
+                        <div class="filter-group" id="brand-filter" role="group" aria-labelledby="brand-label">
+                            <button type="button" class="filter-button is-active" data-brand="all" aria-pressed="true">All</button>
+                            <button type="button" class="filter-button" data-brand="porsche" aria-pressed="false"><img src="images/brands/porsche.svg" alt="" width="18" height="18">Porsche</button>
+                            <button type="button" class="filter-button" data-brand="mercedes" aria-pressed="false"><img src="images/brands/mercedes.svg" alt="" width="18" height="18">Mercedes-Benz</button>
+                            <button type="button" class="filter-button" data-brand="audi" aria-pressed="false"><img src="images/brands/audi.svg" alt="" width="18" height="18">Audi</button>
+                        </div>
+                    </div>
+                    <div class="select-block">
+                        <label for="car-sort" class="form-label">Sort by</label>
+                        <select class="form-select" id="car-sort" name="car-sort">
+                            <option value="default">Recommended</option>
+                            <option value="price-asc">Price: low to high</option>
+                            <option value="price-desc">Price: high to low</option>
+                            <option value="hp-desc">Power: most first</option>
+                        </select>
+                    </div>
+                    <div class="select-block">
+                        <p class="form-label" id="currency-label">Currency</p>
+                        <div class="segmented" id="currency-switch" role="group" aria-labelledby="currency-label">
+                            <button type="button" class="segmented-button is-active" data-currency="USD" aria-pressed="true">USD</button>
+                            <button type="button" class="segmented-button" data-currency="KZT" aria-pressed="false">KZT</button>
+                            <button type="button" class="segmented-button" data-currency="EUR" aria-pressed="false">EUR</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalogue-status">
+                    <p class="result-count" id="result-count" aria-live="polite">Showing 6 of 6 cars</p>
+                    <p class="rate-note" id="rate-note">Prices in US dollars.</p>
+                </div>
+                <div class="no-results" id="no-results" hidden>
+                    <p>No results found. Try another name or choose a different brand.</p>
+                    <button type="button" class="button button-outline" id="reset-filters">Show all cars</button>
+                </div>
+                <div class="cards" id="car-list">
+                    <article class="card car-card" id="porsche-911" data-brand="porsche" data-type="Sports car" data-price="130000" data-hp="450" data-order="0">
+                        <div class="car-media">
+                            <img class="card-image" src="images/porsche-911.jpg" alt="Grey Porsche 911 parked by a green hedge" width="1200" height="900" loading="lazy">
+                            <span class="brand-badge"><img src="images/brands/porsche.svg" alt="Porsche logo" width="26" height="26"></span>
+                            <span class="emblem emblem-porsche-911"><img class="emblem-img" src="images/emblems/porsche-911.png" alt="Porsche 911 Carrera S badge" width="395" height="120" loading="lazy"><span class="emblem-shine" style="-webkit-mask-image: url('images/emblems/porsche-911.png'); mask-image: url('images/emblems/porsche-911.png')"></span></span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Porsche 911 Carrera S</h3>
+                            <p>The classic rear-engine sports car. Very fast but still fine for everyday driving.</p>
+                            <dl class="specs">
+                                <dt>Type</dt><dd>Sports car</dd>
+                                <dt>Engine</dt><dd>Petrol, 450 hp</dd>
+                                <dt>Seats</dt><dd>4</dd>
+                            </dl>
+                            <p class="price">From <span class="money" data-usd="130000">$130,000</span></p>
+                            <div class="card-actions">
+                                <button type="button" class="button add-to-shortlist" data-car="Porsche 911 Carrera S"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg><span>Add to shortlist</span></button>
+                                <a class="button button-outline" href="contact.html?car=porsche-911#test-drive">Book a test drive</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card car-card" id="mercedes-g63" data-brand="mercedes" data-type="SUV" data-price="180000" data-hp="585" data-order="1">
+                        <div class="car-media">
+                            <img class="card-image" src="images/mercedes-g63.jpg" alt="Black Mercedes-AMG G 63 in front of snowy mountains" width="1200" height="900" loading="lazy">
+                            <span class="brand-badge"><img src="images/brands/mercedes.svg" alt="Mercedes-Benz logo" width="26" height="26"></span>
+                            <span class="emblem emblem-mercedes-g63"><img class="emblem-img" src="images/emblems/mercedes-g63.png" alt="Mercedes-AMG G 63 badge" width="323" height="192" loading="lazy"><span class="emblem-shine" style="-webkit-mask-image: url('images/emblems/mercedes-g63.png'); mask-image: url('images/emblems/mercedes-g63.png')"></span></span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Mercedes-AMG G 63</h3>
+                            <p>The famous &ldquo;Gelik&rdquo;. Strong off-road, a lot of space and a powerful V8 engine.</p>
+                            <dl class="specs">
+                                <dt>Type</dt><dd>SUV</dd>
+                                <dt>Engine</dt><dd>Petrol V8, 585 hp</dd>
+                                <dt>Seats</dt><dd>5</dd>
+                            </dl>
+                            <p class="price">From <span class="money" data-usd="180000">$180,000</span></p>
+                            <div class="card-actions">
+                                <button type="button" class="button add-to-shortlist" data-car="Mercedes-AMG G 63"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg><span>Add to shortlist</span></button>
+                                <a class="button button-outline" href="contact.html?car=mercedes-g63#test-drive">Book a test drive</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card car-card" id="mercedes-s-class" data-brand="mercedes" data-type="Sedan" data-price="125000" data-hp="435" data-order="2">
+                        <div class="car-media">
+                            <img class="card-image" src="images/mercedes-s-class.jpg" alt="Black Mercedes-Benz S-Class on a stone street" width="1200" height="900" loading="lazy">
+                            <span class="brand-badge"><img src="images/brands/mercedes.svg" alt="Mercedes-Benz logo" width="26" height="26"></span>
+                            <span class="emblem emblem-mercedes-s-class"><img class="emblem-img" src="images/emblems/mercedes-s-class.png" alt="Mercedes-Benz S 500 4MATIC badge" width="281" height="120" loading="lazy"><span class="emblem-shine" style="-webkit-mask-image: url('images/emblems/mercedes-s-class.png'); mask-image: url('images/emblems/mercedes-s-class.png')"></span></span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Mercedes-Benz S-Class</h3>
+                            <p>A big business sedan with a very quiet and comfortable cabin.</p>
+                            <dl class="specs">
+                                <dt>Type</dt><dd>Sedan</dd>
+                                <dt>Engine</dt><dd>Petrol, 435 hp</dd>
+                                <dt>Seats</dt><dd>5</dd>
+                            </dl>
+                            <p class="price">From <span class="money" data-usd="125000">$125,000</span></p>
+                            <div class="card-actions">
+                                <button type="button" class="button add-to-shortlist" data-car="Mercedes-Benz S-Class"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg><span>Add to shortlist</span></button>
+                                <a class="button button-outline" href="contact.html?car=mercedes-s-class#test-drive">Book a test drive</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card car-card" id="porsche-taycan" data-brand="porsche" data-type="Electric" data-price="110000" data-hp="530" data-order="3">
+                        <div class="car-media">
+                            <img class="card-image" src="images/porsche-taycan.jpg" alt="Silver Porsche Taycan parked near a brick building" width="1200" height="900" loading="lazy">
+                            <span class="brand-badge"><img src="images/brands/porsche.svg" alt="Porsche logo" width="26" height="26"></span>
+                            <span class="emblem emblem-porsche-taycan"><img class="emblem-img" src="images/emblems/porsche-taycan.png" alt="Porsche Taycan 4S badge" width="520" height="92" loading="lazy"><span class="emblem-shine" style="-webkit-mask-image: url('images/emblems/porsche-taycan.png'); mask-image: url('images/emblems/porsche-taycan.png')"></span></span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Porsche Taycan 4S</h3>
+                            <p>A fully electric Porsche. Charges from 5 to 80% in about 23 minutes.</p>
+                            <dl class="specs">
+                                <dt>Type</dt><dd>Electric</dd>
+                                <dt>Engine</dt><dd>Electric, 530 hp</dd>
+                                <dt>Seats</dt><dd>4</dd>
+                            </dl>
+                            <p class="price">From <span class="money" data-usd="110000">$110,000</span></p>
+                            <div class="card-actions">
+                                <button type="button" class="button add-to-shortlist" data-car="Porsche Taycan 4S"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg><span>Add to shortlist</span></button>
+                                <a class="button button-outline" href="contact.html?car=porsche-taycan#test-drive">Book a test drive</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card car-card" id="audi-a7" data-brand="audi" data-type="Sportback" data-price="78000" data-hp="340" data-order="4">
+                        <div class="car-media">
+                            <img class="card-image" src="images/audi-a7.jpg" alt="Dark grey Audi A7 Sportback at night with headlights on" width="1200" height="900" loading="lazy">
+                            <span class="brand-badge"><img src="images/brands/audi.svg" alt="Audi logo" width="26" height="26"></span>
+                            <span class="emblem emblem-audi-a7"><img class="emblem-img" src="images/emblems/audi-a7.png" alt="Audi A7 55 TFSI quattro badge" width="310" height="120" loading="lazy"><span class="emblem-shine" style="-webkit-mask-image: url('images/emblems/audi-a7.png'); mask-image: url('images/emblems/audi-a7.png')"></span></span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Audi A7 Sportback</h3>
+                            <p>A four-door coupe with a big boot. The LED headlights look great at night.</p>
+                            <dl class="specs">
+                                <dt>Type</dt><dd>Sportback</dd>
+                                <dt>Engine</dt><dd>Petrol, 340 hp</dd>
+                                <dt>Seats</dt><dd>5</dd>
+                            </dl>
+                            <p class="price">From <span class="money" data-usd="78000">$78,000</span></p>
+                            <div class="card-actions">
+                                <button type="button" class="button add-to-shortlist" data-car="Audi A7 Sportback"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg><span>Add to shortlist</span></button>
+                                <a class="button button-outline" href="contact.html?car=audi-a7#test-drive">Book a test drive</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card car-card" id="porsche-718-spyder" data-brand="porsche" data-type="Convertible" data-price="105000" data-hp="420" data-order="5">
+                        <div class="car-media">
+                            <img class="card-image" src="images/porsche-718-spyder.jpg" alt="Yellow Porsche 718 Spyder on a mountain road" width="1200" height="900" loading="lazy">
+                            <span class="brand-badge"><img src="images/brands/porsche.svg" alt="Porsche logo" width="26" height="26"></span>
+                            <span class="emblem emblem-porsche-718-spyder"><img class="emblem-img" src="images/emblems/porsche-718-spyder.png" alt="Porsche 718 Spyder badge" width="329" height="120" loading="lazy"><span class="emblem-shine" style="-webkit-mask-image: url('images/emblems/porsche-718-spyder.png'); mask-image: url('images/emblems/porsche-718-spyder.png')"></span></span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Porsche 718 Spyder</h3>
+                            <p>A light open-top car with the engine in the middle. Made for twisty roads.</p>
+                            <dl class="specs">
+                                <dt>Type</dt><dd>Convertible</dd>
+                                <dt>Engine</dt><dd>Petrol, 420 hp</dd>
+                                <dt>Seats</dt><dd>2</dd>
+                            </dl>
+                            <p class="price">From <span class="money" data-usd="105000">$105,000</span></p>
+                            <div class="card-actions">
+                                <button type="button" class="button add-to-shortlist" data-car="Porsche 718 Spyder"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg><span>Add to shortlist</span></button>
+                                <a class="button button-outline" href="contact.html?car=porsche-718-spyder#test-drive">Book a test drive</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="shortlist-section" aria-labelledby="shortlist-title">
+            <div class="container">
+                <h2 id="shortlist-title">Your shortlist</h2>
+                <p class="section-intro">Press &ldquo;Add to shortlist&rdquo; on any car or write a note for the consultant, for example &ldquo;ask about winter tyres&rdquo;. The list stays in this browser after a reload and is shown in your <a href="profile.html">profile</a>.</p>
+                <div class="feature-box shortlist-box">
+                    <form class="inline-form" id="shortlist-form" novalidate>
+                        <div class="form-field">
+                            <label for="shortlist-input" class="form-label">Car or question</label>
+                            <input type="text" class="form-control" id="shortlist-input" name="shortlist-item" maxlength="60" autocomplete="off" aria-describedby="shortlist-error">
+                        </div>
+                        <button type="submit" class="button">Add</button>
+                    </form>
+                    <p class="field-message" id="shortlist-error" role="alert" hidden></p>
+                    <p class="result-count" id="shortlist-count">0 items</p>
+                    <p class="empty-state" id="shortlist-empty">Your shortlist is empty. Add a car from the catalogue above or write your own note.</p>
+                    <ul class="shortlist" id="shortlist"></ul>
+                    <a class="button button-outline shortlist-next" href="contact.html#test-drive">Book a test drive</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="compare" aria-labelledby="compare-title">
+            <div class="container">
+                <h2 id="compare-title">Compare models</h2>
+                <div class="table-wrap">
+                    <table>
+                        <caption>Main specifications and starting prices of all six models</caption>
+                        <thead>
+                            <tr><th scope="col">Model</th><th scope="col">Type</th><th scope="col">Engine</th><th scope="col">0&ndash;100 km/h</th><th scope="col">Seats</th><th scope="col">Price from</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row"><span class="table-model"><img class="table-emblem" src="images/emblems/porsche-911.png" alt="Porsche 911 Carrera S badge" width="395" height="120" loading="lazy"><span>Porsche 911 Carrera S</span></span></th><td>Sports car</td><td>Petrol, 450 hp</td><td>3.7 s</td><td>4</td><td><span class="money" data-usd="130000">$130,000</span></td></tr>
+                            <tr><th scope="row"><span class="table-model"><img class="table-emblem" src="images/emblems/mercedes-g63.png" alt="Mercedes-AMG G 63 badge" width="323" height="192" loading="lazy"><span>Mercedes-AMG G 63</span></span></th><td>SUV</td><td>Petrol V8, 585 hp</td><td>4.5 s</td><td>5</td><td><span class="money" data-usd="180000">$180,000</span></td></tr>
+                            <tr><th scope="row"><span class="table-model"><img class="table-emblem" src="images/emblems/mercedes-s-class.png" alt="Mercedes-Benz S 500 4MATIC badge" width="281" height="120" loading="lazy"><span>Mercedes-Benz S-Class</span></span></th><td>Sedan</td><td>Petrol, 435 hp</td><td>4.9 s</td><td>5</td><td><span class="money" data-usd="125000">$125,000</span></td></tr>
+                            <tr><th scope="row"><span class="table-model"><img class="table-emblem" src="images/emblems/porsche-taycan.png" alt="Porsche Taycan 4S badge" width="520" height="92" loading="lazy"><span>Porsche Taycan 4S</span></span></th><td>Electric</td><td>Electric, 530 hp</td><td>4.0 s</td><td>4</td><td><span class="money" data-usd="110000">$110,000</span></td></tr>
+                            <tr><th scope="row"><span class="table-model"><img class="table-emblem" src="images/emblems/audi-a7.png" alt="Audi A7 55 TFSI quattro badge" width="310" height="120" loading="lazy"><span>Audi A7 Sportback</span></span></th><td>Sportback</td><td>Petrol, 340 hp</td><td>5.3 s</td><td>5</td><td><span class="money" data-usd="78000">$78,000</span></td></tr>
+                            <tr><th scope="row"><span class="table-model"><img class="table-emblem" src="images/emblems/porsche-718-spyder.png" alt="Porsche 718 Spyder badge" width="329" height="120" loading="lazy"><span>Porsche 718 Spyder</span></span></th><td>Convertible</td><td>Petrol, 420 hp</td><td>4.4 s</td><td>2</td><td><span class="money" data-usd="105000">$105,000</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="services-title">
+            <div class="container">
+                <h2 id="services-title">After-sale services</h2>
+                <div class="service-list">
+                    <article class="card reveal">
+                        <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg></span>
+                        <h3>Financing</h3>
+                        <p>We explain the car loan options of partner banks.</p>
+                        <ul>
+                            <li>Down payment from 20%</li>
+                            <li>Terms from 1 to 5 years</li>
+                        </ul>
+                    </article>
+                    <article class="card reveal">
+                        <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg></span>
+                        <h3>Trade-in</h3>
+                        <p>Our expert checks your current car during your visit.</p>
+                        <ul>
+                            <li>Free technical check</li>
+                            <li>Value counted in the new price</li>
+                        </ul>
+                    </article>
+                    <article class="card reveal">
+                        <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/></svg></span>
+                        <h3>Maintenance</h3>
+                        <p>Regular service in our own workshop.</p>
+                        <ul>
+                            <li>Oil, brakes and tyres</li>
+                            <li>Detailing and cleaning</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-band" aria-labelledby="cta-title">
+            <div class="container">
+                <h2 id="cta-title">Want to try one of these cars?</h2>
+                <p>Choose a model and a day in the test drive form.</p>
+                <div class="button-row">
+                    <a class="button" href="contact.html#test-drive">Book a test drive</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <section aria-labelledby="footer-about">
+                    <h2 id="footer-about" class="footer-logo"><img src="images/logo-mark.svg" alt="" width="32" height="32"> Aurelius Cars</h2>
+                    <p>A car showroom in Astana with Porsche, Mercedes-Benz and Audi models, test drives and our own service centre.</p>
+                    <ul class="footer-brands" aria-label="Brands in our showroom">
+                        <li><img src="images/brands/porsche.svg" alt="Porsche logo" width="28" height="28"></li>
+                        <li><img src="images/brands/mercedes.svg" alt="Mercedes-Benz logo" width="28" height="28"></li>
+                        <li><img src="images/brands/audi.svg" alt="Audi logo" width="28" height="28"></li>
+                    </ul>
+                </section>
+                <section aria-labelledby="footer-pages">
+                    <h2 id="footer-pages">Pages</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Cars &amp; Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </section>
+                <section aria-labelledby="footer-club">
+                    <h2 id="footer-club">Aurelius Club</h2>
+                    <ul>
+                        <li><a href="register.html">Sign up</a></li>
+                        <li><a href="login.html">Log in</a></li>
+                        <li><a href="profile.html">My profile</a></li>
+                    </ul>
+                </section>
+                <section aria-labelledby="footer-contact">
+                    <h2 id="footer-contact">Contact</h2>
+                    <address>
+                        <p>12 Gold Avenue, Astana</p>
+                        <p><a href="tel:+77000000000">+7 700 000 0000</a></p>
+                        <p><a href="mailto:hello@aureliuscars.example">hello@aureliuscars.example</a></p>
+                    </address>
+                </section>
+            </div>
+            <p class="copyright">&copy; 2026 Aurelius Cars. Final project for Web Technologies (Frontend), Astana IT University, group MT-2504. The showroom, address and phone number are fictional. Car brand logos belong to their owners and are shown only to name the brands.</p>
+        </div>
+    </footer>
+    <p class="toast" id="toast" role="status" aria-live="polite"></p>
+    <script src="js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/catalogue.js"></script>
+</body>
+</html>

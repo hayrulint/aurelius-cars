@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Log in to your Aurelius Club account.">
+    <meta name="theme-color" content="#0d0d0d">
+    <title>Log in | Aurelius Cars</title>
+    <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <script>
+        // runs before the page is drawn: the "js" class lets CSS prepare the menu and animations,
+        // and the saved theme is applied at once, so there is no dark flash in light mode
+        document.documentElement.classList.add('js');
+        try {
+            if (localStorage.getItem('theme') === 'light') {
+                document.documentElement.classList.add('theme-light');
+                document.documentElement.setAttribute('data-bs-theme', 'light');
+            }
+        } catch (error) {}
+    </script>
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">
+                <img class="logo-mark" src="images/logo-mark.svg" alt="Aurelius Cars logo: gold letter A" width="40" height="40">
+                <span class="logo-text">Aurelius <span>Cars</span></span>
+            </a>
+            <button type="button" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                <span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="menu-label">Menu</span>
+            </button>
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="services.html">Cars &amp; Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="register.html" class="nav-signup" data-guest-only>Sign up</a>
+                <a href="login.html" class="nav-account" id="account-link" aria-current="page"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span id="account-label">Log in</span></a>
+            </nav>
+            <button type="button" id="theme-toggle" class="theme-switch" role="switch" aria-checked="false">
+                <span class="visually-hidden">Light mode</span>
+                <span class="theme-switch-track" aria-hidden="true">
+                    <span class="theme-switch-thumb"><svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg><svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="page-hero page-hero-compact" aria-labelledby="page-title">
+            <div class="container">
+                <p class="eyebrow">Aurelius Club</p>
+                <h1 id="page-title">Welcome back</h1>
+                <p class="section-intro">Log in to see your profile, your shortlist and your test drive requests.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="login-title">
+            <div class="container auth-layout auth-layout-narrow">
+                <div class="card auth-card">
+                    <h2 id="login-title">Log in</h2>
+                    <p class="info-note" id="login-info" hidden></p>
+                    <form id="login-form" class="row g-3" novalidate>
+                        <div class="col-12">
+                            <label for="login-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="login-email" name="email" autocomplete="email" placeholder="name@example.com" maxlength="80" data-validate aria-describedby="login-email-error">
+                            <div class="invalid-feedback" id="login-email-error"></div>
+                        </div>
+                        <div class="col-12">
+                            <label for="login-password" class="form-label">Password</label>
+                            <div class="password-field">
+                                <input type="password" class="form-control" id="login-password" name="password" autocomplete="current-password" maxlength="64" data-validate aria-describedby="login-password-error">
+                                <button type="button" class="password-toggle" aria-controls="login-password" aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg><span class="visually-hidden">Show password</span></button>
+                            </div>
+                            <div class="invalid-feedback" id="login-password-error"></div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="remember-me" name="remember" checked>
+                                <label class="form-check-label" for="remember-me">Keep me logged in on this device</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="button button-arrow button-wide"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/></svg> Log in</button>
+                        </div>
+                    </form>
+                    <p class="form-error-summary" id="login-summary" role="alert" hidden></p>
+                    <p class="auth-switch">New here? <a href="register.html">Create an account</a></p>
+                </div>
+                <aside class="card auth-aside" aria-labelledby="login-aside-title">
+                    <div class="car-media">
+                        <img class="card-image" src="images/audi-a7.jpg" alt="Dark grey Audi A7 Sportback at night with headlights on" width="1200" height="900" loading="lazy">
+                        <span class="brand-badge"><img src="images/brands/audi.svg" alt="Audi logo" width="26" height="26"></span>
+                        <span class="emblem emblem-audi-a7"><img class="emblem-img" src="images/emblems/audi-a7.png" alt="Audi A7 55 TFSI quattro badge" width="310" height="120" loading="lazy"><span class="emblem-shine" style="-webkit-mask-image: url('images/emblems/audi-a7.png'); mask-image: url('images/emblems/audi-a7.png')"></span></span>
+                    </div>
+                    <div class="auth-aside-body">
+                        <h2 id="login-aside-title">Your profile keeps</h2>
+                        <ul class="benefits">
+                            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg> the cars from your shortlist</li>
+                            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M8 13h.01"/><path d="M12 13h.01"/><path d="M16 13h.01"/><path d="M8 17h.01"/><path d="M12 17h.01"/><path d="M16 17h.01"/></svg> your test drive requests</li>
+                            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> your contact details for faster booking</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <section aria-labelledby="footer-about">
+                    <h2 id="footer-about" class="footer-logo"><img src="images/logo-mark.svg" alt="" width="32" height="32"> Aurelius Cars</h2>
+                    <p>A car showroom in Astana with Porsche, Mercedes-Benz and Audi models, test drives and our own service centre.</p>
+                    <ul class="footer-brands" aria-label="Brands in our showroom">
+                        <li><img src="images/brands/porsche.svg" alt="Porsche logo" width="28" height="28"></li>
+                        <li><img src="images/brands/mercedes.svg" alt="Mercedes-Benz logo" width="28" height="28"></li>
+                        <li><img src="images/brands/audi.svg" alt="Audi logo" width="28" height="28"></li>
+                    </ul>
+                </section>
+                <section aria-labelledby="footer-pages">
+                    <h2 id="footer-pages">Pages</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Cars &amp; Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </section>
+                <section aria-labelledby="footer-club">
+                    <h2 id="footer-club">Aurelius Club</h2>
+                    <ul>
+                        <li><a href="register.html">Sign up</a></li>
+                        <li><a href="login.html">Log in</a></li>
+                        <li><a href="profile.html">My profile</a></li>
+                    </ul>
+                </section>
+                <section aria-labelledby="footer-contact">
+                    <h2 id="footer-contact">Contact</h2>
+                    <address>
+                        <p>12 Gold Avenue, Astana</p>
+                        <p><a href="tel:+77000000000">+7 700 000 0000</a></p>
+                        <p><a href="mailto:hello@aureliuscars.example">hello@aureliuscars.example</a></p>
+                    </address>
+                </section>
+            </div>
+            <p class="copyright">&copy; 2026 Aurelius Cars. Final project for Web Technologies (Frontend), Astana IT University, group MT-2504. The showroom, address and phone number are fictional. Car brand logos belong to their owners and are shown only to name the brands.</p>
+        </div>
+    </footer>
+    <p class="toast" id="toast" role="status" aria-live="polite"></p>
+    <script src="js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

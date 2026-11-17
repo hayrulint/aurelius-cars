@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The story, values and numbers of the Aurelius Cars showroom.">
+    <meta name="theme-color" content="#0d0d0d">
+    <title>About | Aurelius Cars</title>
+    <link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <script>
+        // runs before the page is drawn: the "js" class lets CSS prepare the menu and animations,
+        // and the saved theme is applied at once, so there is no dark flash in light mode
+        document.documentElement.classList.add('js');
+        try {
+            if (localStorage.getItem('theme') === 'light') {
+                document.documentElement.classList.add('theme-light');
+                document.documentElement.setAttribute('data-bs-theme', 'light');
+            }
+        } catch (error) {}
+    </script>
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">
+                <img class="logo-mark" src="images/logo-mark.svg" alt="Aurelius Cars logo: gold letter A" width="40" height="40">
+                <span class="logo-text">Aurelius <span>Cars</span></span>
+            </a>
+            <button type="button" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                <span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="menu-label">Menu</span>
+            </button>
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="services.html">Cars &amp; Services</a>
+                <a href="about.html" aria-current="page">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="register.html" class="nav-signup" data-guest-only>Sign up</a>
+                <a href="login.html" class="nav-account" id="account-link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span id="account-label">Log in</span></a>
+            </nav>
+            <button type="button" id="theme-toggle" class="theme-switch" role="switch" aria-checked="false">
+                <span class="visually-hidden">Light mode</span>
+                <span class="theme-switch-track" aria-hidden="true">
+                    <span class="theme-switch-thumb"><svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg><svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="page-hero" aria-labelledby="page-title">
+            <div class="container hero-layout">
+                <div class="hero-text">
+                    <p class="eyebrow">About Aurelius Cars</p>
+                    <h1 id="page-title">A showroom built on trust</h1>
+                    <p class="hero-lead">We started as a small family garage and grew into a showroom with six car models and our own service centre. Our goal has not changed: help every customer find a car they will enjoy for many years.</p>
+                </div>
+                <figure class="hero-media">
+                    <div class="car-media">
+                        <img class="hero-image" src="images/mercedes-s-class.jpg" alt="Black Mercedes-Benz S-Class on a stone street" width="1200" height="900">
+                        <span class="brand-badge"><img src="images/brands/mercedes.svg" alt="Mercedes-Benz logo" width="26" height="26"></span>
+                        <span class="emblem emblem-mercedes-s-class"><img class="emblem-img" src="images/emblems/mercedes-s-class.png" alt="Mercedes-Benz S 500 4MATIC badge" width="281" height="120" loading="lazy"><span class="emblem-shine" style="-webkit-mask-image: url('images/emblems/mercedes-s-class.png'); mask-image: url('images/emblems/mercedes-s-class.png')"></span></span>
+                    </div>
+                    <figcaption>Mercedes-Benz S-Class, one of the cars in our catalogue.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section aria-labelledby="story-title">
+            <div class="container">
+                <h2 id="story-title">Our story</h2>
+                <ol class="timeline">
+                    <li class="reveal"><time datetime="2014">2014</time> The founders open a small garage for car repair and tyre service.</li>
+                    <li class="reveal"><time datetime="2017">2017</time> We start selling checked used cars with a written guarantee.</li>
+                    <li class="reveal"><time datetime="2020">2020</time> The new showroom opens with sports cars, SUVs and sedans.</li>
+                    <li class="reveal"><time datetime="2023">2023</time> We add electric cars and a fast charging station.</li>
+                    <li class="reveal"><time datetime="2026">2026</time> Our own service centre and detailing studio open next to the showroom.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section aria-labelledby="numbers-title">
+            <div class="container">
+                <h2 id="numbers-title">Aurelius in numbers</h2>
+                <dl class="stats">
+                    <div class="card"><dt>Years of work</dt><dd data-count="12">12</dd></div>
+                    <div class="card"><dt>Car models</dt><dd data-count="6">6</dd></div>
+                    <div class="card"><dt>Test drives a month</dt><dd data-count="150" data-suffix="+">150+</dd></div>
+                    <div class="card"><dt>Service bays</dt><dd data-count="8">8</dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <section aria-labelledby="team-title">
+            <div class="container">
+                <h2 id="team-title">The team behind this website</h2>
+                <p class="section-intro">Aurelius Cars is a made-up showroom. The website was built by four students of group MT-2504 at Astana IT University.</p>
+                <ul class="team">
+                    <li class="card reveal"><span class="avatar" aria-hidden="true">TK</span><h3>Tamerlan Khairulin</h3><p>Catalogue, search and filters, authentication, integration</p></li>
+                    <li class="card reveal"><span class="avatar" aria-hidden="true">ZK</span><h3>Zhangir Kadralin</h3><p>Design system, dark and light mode, responsive layout</p></li>
+                    <li class="card reveal"><span class="avatar" aria-hidden="true">FK</span><h3>Feruza Khaissarkyzy</h3><p>Animations, home page, about page, FAQ</p></li>
+                    <li class="card reveal"><span class="avatar" aria-hidden="true">NM</span><h3>Nurasyl Mirambek</h3><p>Form validation, weather API, testing</p></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="values" aria-labelledby="values-title">
+            <div class="container">
+                <h2 id="values-title">What we care about</h2>
+                <blockquote>
+                    <p>&ldquo;A good car is not the most expensive one. It is the one that fits your life.&rdquo;</p>
+                    <footer>&mdash; the first rule of our showroom</footer>
+                </blockquote>
+                <div class="values">
+                    <article class="card reveal">
+                        <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></span>
+                        <h3>Honest advice</h3>
+                        <p>Our consultants explain the strong and weak sides of every model and never push the most expensive option.</p>
+                    </article>
+                    <article class="card reveal">
+                        <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/></svg></span>
+                        <h3>Expert service</h3>
+                        <p>Certified mechanics check every car and look after it after the sale in our own workshop.</p>
+                    </article>
+                    <article class="card reveal">
+                        <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg></span>
+                        <h3>Care for customers</h3>
+                        <p>Sales consultants, mechanics and managers work as one team, so you always know who to ask.</p>
+                    </article>
+                </div>
+                <div class="button-row">
+                    <a class="button button-arrow" href="contact.html#test-drive">Meet us in the showroom <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <section aria-labelledby="footer-about">
+                    <h2 id="footer-about" class="footer-logo"><img src="images/logo-mark.svg" alt="" width="32" height="32"> Aurelius Cars</h2>
+                    <p>A car showroom in Astana with Porsche, Mercedes-Benz and Audi models, test drives and our own service centre.</p>
+                    <ul class="footer-brands" aria-label="Brands in our showroom">
+                        <li><img src="images/brands/porsche.svg" alt="Porsche logo" width="28" height="28"></li>
+                        <li><img src="images/brands/mercedes.svg" alt="Mercedes-Benz logo" width="28" height="28"></li>
+                        <li><img src="images/brands/audi.svg" alt="Audi logo" width="28" height="28"></li>
+                    </ul>
+                </section>
+                <section aria-labelledby="footer-pages">
+                    <h2 id="footer-pages">Pages</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Cars &amp; Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </section>
+                <section aria-labelledby="footer-club">
+                    <h2 id="footer-club">Aurelius Club</h2>
+                    <ul>
+                        <li><a href="register.html">Sign up</a></li>
+                        <li><a href="login.html">Log in</a></li>
+                        <li><a href="profile.html">My profile</a></li>
+                    </ul>
+                </section>
+                <section aria-labelledby="footer-contact">
+                    <h2 id="footer-contact">Contact</h2>
+                    <address>
+                        <p>12 Gold Avenue, Astana</p>
+                        <p><a href="tel:+77000000000">+7 700 000 0000</a></p>
+                        <p><a href="mailto:hello@aureliuscars.example">hello@aureliuscars.example</a></p>
+                    </address>
+                </section>
+            </div>
+            <p class="copyright">&copy; 2026 Aurelius Cars. Final project for Web Technologies (Frontend), Astana IT University, group MT-2504. The showroom, address and phone number are fictional. Car brand logos belong to their owners and are shown only to name the brands.</p>
+        </div>
+    </footer>
+    <p class="toast" id="toast" role="status" aria-live="polite"></p>
+    <script src="js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

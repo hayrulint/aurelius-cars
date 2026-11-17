@@ -1,0 +1,13 @@
+{
+    "name": "Aurelius Cars",
+    "short_name": "Aurelius",
+    "description": "Porsche, Mercedes-Benz and Audi showroom in Astana",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#0d0d0d",
+    "theme_color": "#0d0d0d",
+    "icons": [
+        { "src": "images/favicon/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+        { "src": "images/favicon/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    ]
+}
