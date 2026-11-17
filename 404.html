@@ -18,8 +18,7 @@
     <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
     <script>
-        // runs before the page is drawn: the "js" class lets CSS prepare the menu and animations,
-        // and the saved theme is applied at once, so there is no dark flash in light mode
+
         document.documentElement.classList.add('js');
         try {
             if (localStorage.getItem('theme') === 'light') {
